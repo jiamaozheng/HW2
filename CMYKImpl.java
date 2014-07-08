@@ -17,7 +17,7 @@ public class CMYKImpl implements CMYK {
 	return this.k;
 }
 
-    public EMYKImpl (double c, double m, double y, double k){
+    public CMYKImpl (double c, double m, double y, double k){
 	this.c=c;
 	this.m=m;
 	this.y=y;
@@ -25,15 +25,16 @@ public class CMYKImpl implements CMYK {
 }
 
     public CMYK negate (){
-        double  cyan = 1.0-c;
-	double  magenta = 1.0-m;
-	double yellow=1.0-y;
-	double black = 1.0 -k;
+	CMYK cmyk = new CMYKImpl (1.0-this.c, 1.0-this.m, 1.0-this.y, 1.0-this.k);
 
-	return new CMYK (cyan, magenta, yellow, black);
+	return  cmyk;
 }
 
-    public RGB toRGB ();
+    public RGB toRGB (RGB rgb){
+	int w = Math.max(rgb.getR()/255, rgb.getG()/255, rgb.getB()/255);
+	RGB rgb = new RGBImpl (255w(1-rgb.getR()), 255w(1-rgb.getG()),255w(1-rgb.getB()));
+				    return rgb;
+};
 
     public String toString (){
 	String s = "(CMYK is a four cololr printing process that use cyan"  + this.c +"magenta " + this.m +"yellow" +this.y + "black" +this.k +"inks)";

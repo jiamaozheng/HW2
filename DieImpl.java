@@ -7,13 +7,12 @@ public class DieImpl implements Die {
 
     public int nSides (){
 	if ( this.n>3){
-	    return sides;} else {return "please try a different number";}
+	    return this.n;}
+	return n;
 }
 
-    public int roll(){
-	int r;
-	for (r=0; r<=6;i++){
-
-}
+       public int roll(){
+	   return (int)((Math.random())*6+1);
+       
 }
 }

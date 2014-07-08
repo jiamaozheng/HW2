@@ -10,28 +10,29 @@ public class PointImpl implements Point {
 	return this.y;
 }
 
-    public PointImpl (doulbe x, double y){
+    public PointImpl (double x, double y){
 	this.x=x;
 	this.y=y;
 }
 
-    public double distFromOrigin(double x, double y){
+    public double distFromOrigin(){
 	double d = Math.sqrt(this.x*this.x + this.y*this.y);
 	return d; 
 }
 
     public boolean inUnitCircle(){
-	if (this.disFromOrigin()<1.0){
-	    return ture;
+	if (this.distFromOrigin()<1.0){
+	    return true;
 	}else {return false;}
 }
 
     public double dist (Point p){
-	double dd= Math.sqrt((p.getX-this.x)*(p.getX-this.x)+(p.getY-this.y)*(P.getY-this.y));
+	double dd= Math.sqrt((p.getX()-this.x)*(p.getX()-this.x)+(p.getY()-this.y)*(p.getY()-this.y));
 	return dd;
 }
 
     public String toString (){
-	retun "x axis is" + x + ", y axis is " + y;
+	String s =  "(the point x axis is" + this.x + "the  y axis is " + this. y + ")";
+	return s;
 } 
 }

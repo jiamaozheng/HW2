@@ -1,12 +1,12 @@
 public class CircleImpl implements Circle {
-    private Point center= new PointImpl();
+    private Point center;
     private double ridius;
 
-    public Point getCenter (Point p){
-	return this.center =p; 
+    public Point getCenter (){
+	return this.center; 
 }
     public double getRadius (){
-	return ridius;
+	return this.ridius;
 }
 
     public CircleImpl (Point center, double ridius){
@@ -31,12 +31,12 @@ public class CircleImpl implements Circle {
 
     public boolean contains (Point p){
 	if (this.center.dist(p)<this.ridius){
-     return ture;
-  } else {return false}
+     return true;
+	} else {return false;}
 }
 
     public String toString (){
-	String s = "(center point is"+ this.center + ", and its ridius is" + this.ridius").";
+	String s = "(center point is"+ this.center + ", and its ridius is" + this.ridius+").";
 	return s;
 }
 

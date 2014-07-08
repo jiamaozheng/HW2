@@ -1,10 +1,10 @@
 public interface Point {
 
     public double getX();
-    public doulbe getY();
-    public double disFromOrigin();
+    public double getY();
+    public double distFromOrigin();
     public boolean inUnitCircle();
-    public double dis();
+    public double dist(Point p);
     public String toString ();
 
 }
