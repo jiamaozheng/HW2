@@ -23,16 +23,14 @@ public class RGBImpl implements RGB {
 }
 
     public CMYK toCMYK(){
-	double w1 = this.r/255;
-	double w2 = this.g/255;
-	double w3 = this.b/255;
-	double w = Math.max(w1,w2,w3);
-	CMYK cmyk = new CMYKImpl ((this.w()-(this.r/255))/this.w(), (this.w()-(g/255))/this.w(), (this.w-(b/255))/this.w, 1-this.w);
+	double  w1 =  Math.max (this.r/255.0, this.g/255.0);
+	double w = Math.max (w1, this.b/255.0);
+	CMYK cmyk = new CMYKImpl ((w-(this.r/255))/w, (w-(this.g/255))/w, (w-(this.b/255))/w, (1-w));
 	return cmyk;
 }
 
     public String toString (){
-	String s = "(a RGB color model consists of three color: red," + this.r + "green" + this.g + "and blue" +b+ ")";
+	String s = "a RGB color model consists of three colors: red, " + this.r + " green " + this.g + " and blue " +b;
 	return s;
 }
 

@@ -6,11 +6,11 @@ public class CircleTests {
 
 	Circle c = new CircleImpl (cen,10);
 
-	System.out.println ("center circle diameter is " + c.getRadius());
-	System.out.println ("center is point " + c.getCenter ());
-	System.out.println ("circule area is " + c.area());
-	System.out.println ("circumf is " +c.circumf());
-	System.out.println ("circle contains point " + c.contains(p));
+	System.out.println ("The diameter of the center is " + c.getRadius());
+	System.out.println ("The center point is " + c.getCenter ());
+	System.out.println ("The circle area is  " + c.area());
+	System.out.println (".circumf is " +c.circumf());
+	System.out.println ("Whether the circle contains such points or not:  " + c.contains(p));
 	System.out.println (c.toString());
 }
 

@@ -41,7 +41,7 @@ public class LineSegImpl implements LineSeg {
 	    return p; 
 }
 	public String toString() {
-	String s = "(a line is consisted of two points, one point is " + this.a + "and another point is " + this.b+")";
+	String s = "The line is linked by two points, one point is " + this.a + " and another point is " + this.b;
 	return s;
 }
 }

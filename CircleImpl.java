@@ -8,6 +8,13 @@ public class CircleImpl implements Circle {
     public double getRadius (){
 	return this.ridius;
 }
+    public void setRadius (double ridius){
+	if (ridius >0){
+	    this.ridius=ridius;
+	}else {this.ridius=0;
+	    System.out.println("please check ridius");
+}
+}
 
     public CircleImpl (Point center, double ridius){
 	this.center = center;
@@ -36,7 +43,7 @@ public class CircleImpl implements Circle {
 }
 
     public String toString (){
-	String s = "(center point is"+ this.center + ", and its ridius is" + this.ridius+").";
+	String s = "The center point: "+ this.center + " and its ridius: " + this.ridius;
 	return s;
 }
 

@@ -6,8 +6,8 @@ public class DieImpl implements Die {
 }
 
     public int nSides (){
-	if ( this.n>3){
-	    return this.n;}
+	if (this.n>3){
+	    return this.n=n;}
 	return n;
 }
 

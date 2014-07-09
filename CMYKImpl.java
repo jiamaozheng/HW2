@@ -30,14 +30,14 @@ public class CMYKImpl implements CMYK {
 	return  cmyk;
 }
 
-    public RGB toRGB (RGB rgb){
-	int w = Math.max(rgb.getR()/255, rgb.getG()/255, rgb.getB()/255);
-	RGB rgb = new RGBImpl (255w(1-rgb.getR()), 255w(1-rgb.getG()),255w(1-rgb.getB()));
+    public RGB toRGB (){
+       
+	RGB rgb = new RGBImpl ((int)(255*(1.0-this.c)),(int)(255*(1.0-this.m)),(int)(255*(1.0-this.y)));
 				    return rgb;
 };
 
     public String toString (){
-	String s = "(CMYK is a four cololr printing process that use cyan"  + this.c +"magenta " + this.m +"yellow" +this.y + "black" +this.k +"inks)";
+	String s = "CMYK is a four cololr printing process that use cyan "  + this.c +", magenta " + this.m +", yellow " +this.y + " and black " +this.k;
 	return s; 
 }
 

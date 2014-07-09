@@ -32,7 +32,7 @@ public class PointImpl implements Point {
 }
 
     public String toString (){
-	String s =  "(the point x axis is" + this.x + "the  y axis is " + this. y + ")";
+	String s =  " the x axis of the Point is " + this.x + " and its  y axis is " + this. y;
 	return s;
 } 
 }
